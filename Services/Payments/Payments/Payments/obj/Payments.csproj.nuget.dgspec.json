@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj": {}
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj": {}
   },
   "projects": {
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj": {
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj",
+        "projectUniqueName": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj",
         "projectName": "Payments.Application",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\obj\\",
+        "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj",
+        "packagesPath": "C:\\Users\\PragatiSaxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PragatiSaxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,17 +22,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/OvalUK/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
               },
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj"
               }
             }
           }
@@ -41,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -76,21 +83,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj",
         "projectName": "Payments.Domain",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\obj\\",
+        "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj",
+        "packagesPath": "C:\\Users\\PragatiSaxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PragatiSaxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -98,7 +105,9 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/OvalUK/index.json": {}
         },
         "frameworks": {
           "net8.0": {
@@ -110,6 +119,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -131,21 +145,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj": {
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj",
+        "projectUniqueName": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj",
         "projectName": "Payments.Fakes",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\obj\\",
+        "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj",
+        "packagesPath": "C:\\Users\\PragatiSaxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PragatiSaxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -153,14 +167,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/OvalUK/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
               }
             }
           }
@@ -169,6 +185,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -196,21 +217,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj": {
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj",
         "projectName": "Payments.Infrastructure",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\Payments.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\PragatiSaxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PragatiSaxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -218,17 +239,19 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/OvalUK/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Domain\\Payments.Domain.csproj"
               },
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Fakes\\Payments.Fakes.csproj"
               }
             }
           }
@@ -237,6 +260,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -258,21 +286,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj": {
+    "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj",
+        "projectUniqueName": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj",
         "projectName": "Payments",
-        "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj",
-        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\obj\\",
+        "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\Payments.csproj",
+        "packagesPath": "C:\\Users\\PragatiSaxena\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\PragatiSaxena\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -280,14 +308,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.pkg.github.com/OvalUK/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj": {
-                "projectPath": "C:\\Users\\user\\OneDrive\\Documents\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj"
+              "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj": {
+                "projectPath": "C:\\Users\\PragatiSaxena\\Documents\\Learning\\EcommerceApp_final\\EcommerceApp\\Services\\Payments\\Payments\\Payments.Application\\Payments.Application.csproj"
               }
             }
           }
@@ -296,6 +326,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -326,7 +361,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

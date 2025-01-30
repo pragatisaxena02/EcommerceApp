@@ -1,0 +1,32 @@
+.product-image {
+    max-width: 210px;
+    max-height: 200px;
+}
+
+.product-card {
+    width: 10%; /* Define width of each card (adjust as needed) */
+    padding: 5px; /* Optional: Add padding to the card */
+}
+
+.card-container {
+    display: flex; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Create two equal-width columns */
+    gap: 2px; /* Add some space between the cards */
+}
+
+.filter-end {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 300px;
+    border: 1px solid blueviolet; /* Adds a blue boundary with 2px width */
+    color: blueviolet; /* Sets the text color to white */
+    border-radius: 5px; /* Rounds the corners of the border */
+}
+.selector {
+    margin-top: 20px; /* Adds a 20px margin above the element */
+  }
