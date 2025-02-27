@@ -3,6 +3,7 @@ import { Product } from '../../app/shared/models/product';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Pagination } from '../../app/shared/models/pagination';
 import { ShopParams } from '../../app/shared/models/shopParams';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -52,6 +53,13 @@ baseUrl= "https://localhost:5001/";
     return this.http.get<string[]>( this.baseUrl+ 'Product/brands').subscribe( {
       next: response => this.brands = response
     })
+  }
+  getProductById( id : number)
+  {
+    let params= new HttpParams();
+
+    params = params.append('id', id);
+    return this.http.get<Product>( this.baseUrl+'Product/Id?'+params);
   }
 
   getTypes()

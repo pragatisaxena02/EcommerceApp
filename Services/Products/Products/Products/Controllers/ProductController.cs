@@ -32,6 +32,15 @@ namespace Products.Controllers
             return paginatedResponse;  // Return 200 OK with the list of products
         }
 
+        [HttpGet("Id")]
+        public Product.Domain.Product GetProduct([FromQuery] int id)
+        {
+            var path = _configuration["AppSettings:BaseUrl"];
+            var product = GetProducts(path!, null, id );
+            
+            return product.Item1[0];  // Return 200 OK with the list of products
+        }
+
         [HttpGet("brands")]
         public string[] GetBrands()
         {
@@ -43,7 +52,7 @@ namespace Products.Controllers
         {
             return ["Electronics", "Accessories", "Home Appliances", "Clothes"];
         }
-        private static (Product.Domain.Product[], int) GetProducts( string path, FilterQuery? query )
+        private static (Product.Domain.Product[], int) GetProducts( string path, FilterQuery? query , int? id = null )
         {
             Product.Domain.Product[] products = new[]
          {
@@ -169,6 +178,11 @@ namespace Products.Controllers
                 QuantityInStock = 80
             }
         };
+            if( id is not null)
+            {
+                return (products.Where(x => x.Id == id).ToArray(), 1);
+            }
+
             if(query is null )            
               return (products, products.Length);
 
