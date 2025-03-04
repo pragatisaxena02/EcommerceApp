@@ -10,18 +10,19 @@ export const errorInterceptor: HttpInterceptorFn = (req, next) => {
   const snackBar = inject( SnackService)
   return next(req).pipe(
         catchError((err : HttpErrorResponse) => {
-          console.log( 'Inside interceptor' + err);
+          console.log( 'Inside interceptor' + err.headers);
                    if( err.status == 400 )
                    {
                      snackBar.openSnackBar( err.error.title || err.error)
                    }
                    if( err.status == 404)
                    {
+                    console.log('inside interceptor not found :');
                     router.navigateByUrl('not-found')
                    }
                    if( err.status == 500)
                    {
-                    //console.log('inside interceptor:)
+                    console.log('inside interceptor:');
                     const navigationExtras: NavigationExtras = {
                       state: { dataId: err.error},
                     };

@@ -1,7 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Product.Domain.Query;
-using Product.Domain;
-using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
 
 namespace Products.Controllers
 {
@@ -28,10 +26,28 @@ namespace Products.Controllers
             return Unauthorized();
         }
 
+        [HttpPost("/validation-error")]
+        public IActionResult GetValidationError(Product.Domain.Product product)
+        {
+            return Ok();
+        }
+
         [HttpGet("/internal-server-error")]
         public IActionResult ReturnsInternalServerError()
         {
-            return StatusCode(500, "Internal Server Error");
+            try
+            {
+                // Simulate an exception
+                throw new Exception("Internal Server Error occurred");
+            }
+            catch (Exception ex)
+            {
+                var exceptionHandlerPathFeature = HttpContext.Features.Get<IExceptionHandlerPathFeature>();
+
+                // Log the exception or handle it as needed
+                // For demonstration purposes, we'll just return the exception message and stack trace
+                return StatusCode(500, $"Internal Server Error: {ex.Message}\n\nStack Trace:\n{ex.StackTrace}");
+            }
         }
     }
 }
