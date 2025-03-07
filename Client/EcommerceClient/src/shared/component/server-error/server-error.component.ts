@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-server-error',
   standalone: true,
-  imports: [MatCard],
+  imports: [MatCard, MatCard],
   templateUrl: './server-error.component.html',
   styleUrl: './server-error.component.scss'
 })

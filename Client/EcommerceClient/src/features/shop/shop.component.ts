@@ -12,12 +12,14 @@ import { ShopParams } from '../../app/shared/models/shopParams';
 import {MatPaginator, MatPaginatorModule, PageEvent} from '@angular/material/paginator';
 import { Pagination } from '../../app/shared/models/pagination';
 import { FormsModule } from '@angular/forms';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-shop',
   standalone: true,
   imports: [
     ProductItemComponent,
+    RouterLink,
     MatButton,
     MatIcon,
     MatMenu,
@@ -32,7 +34,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ShopComponent implements OnInit{
 Search: any = "Search";
-  constructor(private shopService: ShopService, public dialogService: MatDialog) {}
+  constructor(private shopService: ShopService, public dialogService: MatDialog, public router: Router) {}
   
   title = 'Ecommerce Platform';
   selectedOptions = [
@@ -106,5 +108,10 @@ Search: any = "Search";
       this.shopParams.pageSize = $event.pageSize;
       this.shopParams.pageNumber = $event.pageIndex;
       this.getProducts();
+      }
+
+      routeToProduct( id: number)
+      {
+        this.router.navigate(['/shop/', id]);
       }
 }
