@@ -1,24 +1,50 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light" clas="custom-theme">
-    <div class="container">
-        <!-- Logo -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img routerlink="/" src="assets/images/amazon-logo.png" alt="Logo" width="75" height="75">
+    </a> 
+
+     <div >
+      <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" aria-current="page" routerLink="/"
+            routerLinkActive="active-link"
+            [routerLinkActiveOptions]="{exact: true}"
+            style="color: black"
+            >Home </a>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/shop" 
+                routerLinkActive="active-link"
+                >Shop</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/test-error" routerLinkActive="active-link">Errors</a>
+            </li>          
+      </ul>
+      <a routerLink="/cart" matBadge="5" matBadgeSize="medium" style="margin-right: 10px;"><mat-icon>shopping_cart</mat-icon></a>
+      <section>
+          <div class="example-button-row">
+              <button mat-stroked-button  style="margin-right: 5px;">
+                  Login
+                </button>
+            <button mat-stroked-button>Register</button>
+          </div>
+        </section>
+    </div>
+  </nav>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light"  style="margin-top: 20px;" class="custom-theme">
+    <div class="container" col="m">
         <a class="navbar-brand" href="#">
             <img routerlink="/" src="assets/images/amazon-logo.png" alt="Logo" width="75" height="75">
         </a>
 
-        <!-- Toggle button for mobile view -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links and button -->
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Center-aligned links -->
-            <ul class="navbar-nav mx-auto">
+             <ul class="navbar-nav mx-auto">
                 <li class="nav-item">
                     <a class="nav-link" aria-current="page" routerLink="/"
                     routerLinkActive="active-link"
                     [routerLinkActiveOptions]="{exact: true}"
-                    >Home</a>
+                    style="color: black"
+                    >Home </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" routerLink="/shop" 
@@ -31,7 +57,6 @@
             </ul>
 
             <a matBadge="5" matBadgeSize="medium" style="margin-right: 10px;"><mat-icon>shopping_cart</mat-icon></a>
-            <!-- Login button aligned to the right -->
             <section>
                 <div class="example-button-row">
                     <button mat-stroked-button  style="margin-right: 5px;">
@@ -42,6 +67,6 @@
               </section>
               
         </div>
-    </div>
-</nav>
-  
+</nav> -->
+
+

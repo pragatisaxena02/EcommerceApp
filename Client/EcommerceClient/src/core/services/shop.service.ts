@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ShopService {
 
-baseUrl= "https://localhost:5001/";
+baseUrl= "https://localhost:62170/";
   products : Product[] = [];
   brands : string[] = [];
   types : string[] = [];

@@ -1,4 +1,5 @@
 using Products.Middleware;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-    var app = builder.Build();
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    var connection = builder.Configuration.GetConnectionString("Cache");
+    options.Configuration = connection;
+});
+
+builder.Services.AddScoped<Products.Contracts.ICartService, Products.Services.CartService>();
+var app = builder.Build();
 
 app.UseMiddleware<ExceptionMiddleware>();
     // Configure the HTTP request pipeline.

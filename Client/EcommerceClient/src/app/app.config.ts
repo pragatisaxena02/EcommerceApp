@@ -6,10 +6,11 @@ import { provideClientHydration } from '@angular/platform-browser';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { provideHttpClient, withInterceptors } from '@angular/common/http';
 import { errorInterceptor } from '../core/interceptors/error.interceptor';
+import { loadingInterceptor } from './core/interceptors/loading.interceptor';
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
               provideClientHydration(), 
               provideAnimationsAsync(),
-              provideHttpClient(withInterceptors([errorInterceptor]))]
+              provideHttpClient(withInterceptors([errorInterceptor, loadingInterceptor]))]
 };

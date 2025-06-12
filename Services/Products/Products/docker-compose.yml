@@ -1,0 +1,30 @@
+services:
+  products:
+    image: ${DOCKER_REGISTRY-}products
+    build:
+      context: .
+      dockerfile: Products/Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_URLS=http://+:5001
+    restart: always
+
+  sql:
+     image: mcr.microsoft.com/azure-sql-edge
+     environment:
+       - ACCEPT_EULA="1"
+       - MSSQL_SA_PASSWORD="Password@123"
+     ports:
+       - "1433:1433"
+
+  redis:
+     image: redis:latest
+     restart: always
+     ports:
+        - "6379:6379"
+     volumes:
+        - redis-data:/data
+
+volumes:
+  redis-data:
