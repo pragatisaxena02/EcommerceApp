@@ -6,6 +6,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 import { BusyService } from '../../core/services/busy.service';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { MatMenu } from '@angular/material/menu';
+import { CartService } from '../../core/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,9 @@ export class HeaderComponent {
 
 public indeterminate: string =  "indeterminate";
 
-  public constructor( public busyService: BusyService){
+  public constructor( public busyService: BusyService, public cartService: CartService) {
+    // The busyService is injected to manage the loading state of the application.
+    // The cartService is injected to manage the shopping cart state.
   
 
   }

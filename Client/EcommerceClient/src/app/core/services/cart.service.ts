@@ -1,8 +1,8 @@
-import { Injectable, signal, Signal } from '@angular/core';
+import { computed, Injectable, signal, Signal } from '@angular/core';
 import { environment } from '../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Cart, CartItem } from '../../shared/models/cart';
-import { take, takeUntil, tap } from 'rxjs';
+import { map, take, takeUntil, tap } from 'rxjs';
 import { Product } from '../../shared/models/product';
 
 @Injectable({
@@ -10,17 +10,40 @@ import { Product } from '../../shared/models/product';
 })
 export class CartService {
 
-  baseUrl = environment.apiUrl;
+  baseUrl = 'http://localhost:5001/';
+
+  itemCount = computed(() => {
+  return this.cart()?.items.reduce((sum, item) => sum + item.quantity, 0)
+  });
+
   cart = signal<Cart|null>(null);
   constructor( private http : HttpClient) { }
+ 
+  totals = computed(() =>{
+    const cart = this.cart();
+    if (!cart || !cart.items) return null;
+    const subtotal = cart.items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    const shipping = 0;
+    const discount = 0;
+
+    return{
+      subtotal: subtotal,
+      shipping: shipping,
+      discount: discount,
+      total: subtotal + shipping - discount
+    }
+  })
+
 
   getCart( id: string)
   {
      return this.http.get<Cart>( this.baseUrl+'cart?id='+id).
      pipe(
-      take(1),
-      tap( cart => this.cart.set(cart) )
-     ).subscribe();
+      map( cart => {
+        this.cart.set(cart);
+        return cart;
+      })
+     );
   }
 
   setCart( cart: Cart)
@@ -33,6 +56,8 @@ export class CartService {
   }
 
   addItemToCart( item: CartItem | Product, quantity = 1) {
+
+    console.log(`Adding item to cart: ${JSON.stringify(item)} with quantity: ${quantity}`);
     const cart = this.cart() ?? this.createCart();
 
     if( this.isProduct(item)){
@@ -75,6 +100,9 @@ export class CartService {
 
   private createCart() : Cart{
     const cart = new Cart();
-    localStorage.setItem('cart_id', cart.id);
+//     if (typeof window !== 'undefined' && localStorage) {
+//     localStorage.setItem('cart_id', cart.id);
+// }
     return cart;
   }
+}

@@ -7,7 +7,7 @@
     <h2 class="text-sm font-semibold uppercase">{{product.name}}</h2>
     <p class="text-sm font-light">{{product.price | currency}}</p>
     </mat-card-content>
-    <mat-card-actions class="example-button-row">
+    <mat-card-actions class="example-button-row" (click)="$event.stopPropagation()">
         <button mat-stroked-button (click)="cartService.addItemToCart(product)" class="add-to-cart-button">
         <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="add_shopping_cart"></mat-icon>
         Add to cart

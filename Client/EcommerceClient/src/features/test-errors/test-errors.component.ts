@@ -13,7 +13,7 @@ import { MatButton } from '@angular/material/button';
 })
 export class TestErrorsComponent {
 
-  baseUrl: string = 'https://localhost:5001/';
+  baseUrl: string = 'http://localhost:5001/';
   http? : HttpClient;
 
  constructor( http : HttpClient){

@@ -1,1 +1,43 @@
-<p>cart works!</p>
+<div class="container mx-auto">
+    <div class="row">
+        <div class="col-9">
+
+            <!-- Cart Items Section -->
+
+            <table class="min-w-full table-auto border border-gray-300">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="text-left p-2 border">Product</th>
+                        <th class="text-left p-2 border">Image</th>
+                        <th class="text-left p-2 border">Price</th>
+                        <th class="text-left p-2 border">Quantity</th>
+                        <th class="text-left p-2 border">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let item of cartService.cart()?.items">
+                        <td class="p-2 border">{{ item.productName }}</td>
+                        <td class="p-2 border"><a
+                                routerLink="/shop/{{item.productId}}"
+                                class="shrink-0">
+                                <img
+                                    src="{{item.pictureUrl}}"
+                                    alt="product image"
+                                    class="h-20 w-20 rounded" />
+                            </a></td>
+                        <td class="p-2 border">{{ item.price | currency }}</td>
+                        <td class="p-2 border">{{ item.quantity }}</td>
+                        <td class="p-2 border">{{ item.price * item.quantity |
+                            currency }}</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <!-- Order Summary Section -->
+        <div class="col-3">
+            <app-order-summary></app-order-summary>
+        </div>
+    </div>
+</div>

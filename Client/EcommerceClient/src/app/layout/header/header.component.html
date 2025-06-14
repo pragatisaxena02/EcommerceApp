@@ -21,7 +21,7 @@
                 <a class="nav-link" routerLink="/test-error" routerLinkActive="active-link">Errors</a>
             </li>          
       </ul>
-      <a routerLink="/cart" matBadge="5" matBadgeSize="medium" style="margin-right: 10px;"><mat-icon>shopping_cart</mat-icon></a>
+      <a routerLink="/cart" matBadge="{{cartService.itemCount()}}" matBadgeSize="medium" style="margin-right: 10px;"><mat-icon>shopping_cart</mat-icon></a>
       <section>
           <div class="example-button-row">
               <button mat-stroked-button  style="margin-right: 5px;">
