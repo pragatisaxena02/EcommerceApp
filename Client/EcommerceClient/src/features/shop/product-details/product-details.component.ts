@@ -6,20 +6,26 @@ import { MatIcon } from '@angular/material/icon';
 
 import { CurrencyPipe } from '@angular/common';
 import { MatButton } from '@angular/material/button';
-import { MatFormField, MatLabel } from '@angular/material/form-field';
+import { MatFormField, MatFormFieldModule, MatLabel } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatDivider } from '@angular/material/divider';
+import { BusyService } from '../../../app/core/services/busy.service';
+import { of, takeUntil } from 'rxjs';
+import { response } from 'express';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CurrencyPipe, MatIcon, MatButton, MatFormField, MatLabel, MatDivider],
+  imports: [CurrencyPipe, MatIcon, MatButton, MatFormField, MatLabel, MatDivider, MatFormFieldModule, MatInputModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.scss'
 })
 export class ProductDetailsComponent implements OnInit{
   product : Product | undefined;
 
-  constructor( public shopService: ShopService, public activatedRoute: ActivatedRoute) {}
+  constructor( public shopService: ShopService, public activatedRoute: ActivatedRoute  ) {
+
+  }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.paramMap.get('id');
@@ -53,6 +59,5 @@ export class ProductDetailsComponent implements OnInit{
     console.log( this.product )
    });
 
-   console.log( this.product);
   }
 }

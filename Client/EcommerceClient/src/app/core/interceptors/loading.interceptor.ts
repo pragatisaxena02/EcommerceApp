@@ -10,6 +10,10 @@ export const loadingInterceptor: HttpInterceptorFn = (req, next) => {
   
   busyService.show();
 
+  if( req === undefined || req === null  )
+  {
+    busyService.hide();
+  }
   return next(req).pipe(
     delay(500),
     finalize(() => busyService.hide() )

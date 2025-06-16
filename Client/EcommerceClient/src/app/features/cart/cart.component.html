@@ -16,7 +16,12 @@
                 </thead>
                 <tbody>
                     <tr *ngFor="let item of cartService.cart()?.items">
-                        <td class="p-2 border">{{ item.productName }}</td>
+                        <td class="p-2 border">{{ item.productName }}
+                            <button mat-icon-button
+                                (click)="removeItemFromCart(item.productId, item.quantity)">
+                                <mat-icon>delete</mat-icon>
+                            </button>
+                        </td>
                         <td class="p-2 border"><a
                                 routerLink="/shop/{{item.productId}}"
                                 class="shrink-0">
@@ -26,7 +31,14 @@
                                     class="h-20 w-20 rounded" />
                             </a></td>
                         <td class="p-2 border">{{ item.price | currency }}</td>
-                        <td class="p-2 border">{{ item.quantity }}</td>
+                        <td class="p-2 border">{{ item.quantity }}<button
+                                mat-icon-button
+                                (click)="decrementQuantity(item.productId)">
+                                <mat-icon>remove</mat-icon>
+                            </button><button mat-icon-button
+                                (click)="incrementQuantity(item)">
+                                <mat-icon>add</mat-icon>
+                            </button></td>
                         <td class="p-2 border">{{ item.price * item.quantity |
                             currency }}</td>
                     </tr>
