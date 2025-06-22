@@ -59,7 +59,7 @@ namespace Products.Controllers
             new Product.Domain.Product
             {
                 Id = 1,
-                Name = "Laptop",
+                Name = "Laptop_fornewDeployment",
                 Description = "A high-performance laptop for work and gaming.",
                 Price = 999.99m,
                 ImageUrl = path+"/Laptop.jpg",
