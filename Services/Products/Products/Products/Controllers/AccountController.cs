@@ -4,6 +4,8 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Product.Domain.Dtos;
+using Products.Domain;
+using System.Security.Authentication;
 using System.Security.Claims;
 
 namespace Products.Controllers
@@ -79,6 +81,35 @@ namespace Products.Controllers
                UserName = User.Identity?.Name,
                Email = User.FindFirstValue(ClaimTypes.Email)
            });
+        }
+
+        [Authorize]
+        [HttpPost("address")]
+        public async Task<ActionResult<Address>> CreateOrUpdateAddress( AddressDto addressDto)
+        {
+            var user = await _signInManager.UserManager.Users
+                .Include(x => x.Address)
+                .FirstOrDefaultAsync(x => x.Email == User.FindFirstValue(ClaimTypes.Email));
+
+            if( user is null)
+                throw new AuthenticationException("User not found");
+
+            user.Address = new Address
+            {
+                Line1 = addressDto.Line1,
+                Line2 = addressDto.Line2,
+                City = addressDto.City,
+                State = addressDto.State,
+                PostalCode = addressDto.PostalCode,
+                Country = addressDto.Country
+            };
+
+            var result = await _signInManager.UserManager.UpdateAsync(user);
+
+            if(!result.Succeeded)
+                return BadRequest(result);
+
+            return Ok(user);
         }
     }
 }
