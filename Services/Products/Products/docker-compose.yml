@@ -1,34 +1,52 @@
+version: '3.8'
+
 services:
   sql:
-    container_name: sqlserver
     image: mcr.microsoft.com/azure-sql-edge:latest
+    container_name: azure-sql-edge
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=Password@123
     ports:
       - "1433:1433"
-    environment:
-     - ACCEPT_EULA=Y
-     - SA_PASSWORD=Password@123    
-    
+    # volumes:
+    #   - sql-data:/var/opt/mssql
+    networks:
+      - mynetwork
+
   products:
     container_name: app-products
-    image: ${DOCKER_REGISTRY-}products
     build:
       context: .
       dockerfile: Products/Dockerfile
+   
     ports:
       - "5001:5001"
     depends_on:
       - sql
     environment:
+      - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=http://+:5001
+      - ConnectionStrings__DBConnection=Server=azure-sql-edge;Database=skinet;User Id=sa;Password=Password@123;TrustServerCertificate=True
     restart: always
+    networks:
+      - mynetwork
 
-#   redis:
-#      image: redis:latest
-#      restart: always
-#      ports:
-#         - "6379:6379"
-#      volumes:
-#         - redis-data:/data
+  redis:
+    image: redis:latest
+    container_name: redis
+    restart: always
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - mynetwork
 
-# volumes:
-#   redis-data:
+networks:
+  mynetwork:
+    driver: bridge
+
+volumes:
+  # sql-data:
+  redis-data:

@@ -14,7 +14,7 @@ namespace Infrastructure.DbContext
     public class AppDbContext : IdentityDbContext<AppUser>
     {
         public DbSet<Product.Domain.Product> Products { get; set; }
-      
+        public DbSet<AppUser> AppUsers { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
         {

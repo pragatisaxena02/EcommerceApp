@@ -1,20 +1,30 @@
 using Infrastructure.DbContext;
 using Infrastructure.DbEntities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Products.Middleware;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
+var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
+var config = new ConfigurationBuilder()
+    .AddJsonFile("appsettings.json")
+    .AddJsonFile($"appsettings.{env}.json", optional: true)
+    .AddEnvironmentVariables()
+    .Build();
+var connectionString = config.GetConnectionString("DBConnection");
 
 
 // Add services to the container.
 
 builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConnection")));
+    options.UseSqlServer(connectionString));
 
 builder.Services.AddIdentityApiEndpoints<AppUser>()
-    .AddEntityFrameworkStores<AppDbContext>();
+    .AddEntityFrameworkStores<AppDbContext>()
+        .AddDefaultTokenProviders();
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -49,10 +59,10 @@ app.UseMiddleware<ExceptionMiddleware>();
             .AllowAnyHeader());
 
     app.UseHttpsRedirection();
-
+app.MapIdentityApi<AppUser>();
     app.UseAuthorization();
 
     app.MapControllers();
-    //app.MapIdentityApi<AppUser>();
+    app.MapGroup("api").MapIdentityApi<AppUser>();
 
 app.Run();
